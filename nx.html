@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 600px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "Miya", "label": "Miya", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Lolita", "label": "Lolita", "shape": "dot", "size": 40}, {"color": "#97c2fc", "id": "Rafaela", "label": "Rafaela", "shape": "dot", "size": 40}, {"color": "#97c2fc", "id": "Minotaur", "label": "Minotaur", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Balmond", "label": "Balmond", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Nana", "label": "Nana", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Saber", "label": "Saber", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Harley", "label": "Harley", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Akai", "label": "Akai", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Natalia", "label": "Natalia", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Alice", "label": "Alice", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Aurora", "label": "Aurora", "shape": "dot", "size": 120}, {"color": "#97c2fc", "id": "Tigreal", "label": "Tigreal", "shape": "dot", "size": 170}, {"color": "#97c2fc", "id": "Gord", "label": "Gord", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Lapu-Lapu", "label": "Lapu-Lapu", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Vexana", "label": "Vexana", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Irithel", "label": "Irithel", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Jawhead", "label": "Jawhead", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Martis", "label": "Martis", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Chang\u0027e", "label": "Chang\u0027e", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Vale", "label": "Vale", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Faramis", "label": "Faramis", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Granger", "label": "Granger", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Esmeralda", "label": "Esmeralda", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Terizla", "label": "Terizla", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Silvanna", "label": "Silvanna", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Luo Yi", "label": "Luo Yi", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Barats", "label": "Barats", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Paquito", "label": "Paquito", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Beatrix", "label": "Beatrix", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Alucard", "label": "Alucard", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Karina", "label": "Karina", "shape": "dot", "size": 50}, {"color": "#97c2fc", "id": "Diggie", "label": "Diggie", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Hilda", "label": "Hilda", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Brody", "label": "Brody", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Gloo", "label": "Gloo", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Fredrinn", "label": "Fredrinn", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Lesley", "label": "Lesley", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Franco", "label": "Franco", "shape": "dot", "size": 50}, {"color": "#97c2fc", "id": "Odette", "label": "Odette", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Layla", "label": "Layla", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Cyclops", "label": "Cyclops", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Kaja", "label": "Kaja", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Lunox", "label": "Lunox", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Bane", "label": "Bane", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Zhask", "label": "Zhask", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Bruno", "label": "Bruno", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Ruby", "label": "Ruby", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Clint", "label": "Clint", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Roger", "label": "Roger", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Belerick", "label": "Belerick", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Dyrroth", "label": "Dyrroth", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Eudora", "label": "Eudora", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Zilong", "label": "Zilong", "shape": "dot", "size": 40}, {"color": "#97c2fc", "id": "Hayabusa", "label": "Hayabusa", "shape": "dot", "size": 30}, {"color": "#97c2fc", "id": "Angela", "label": "Angela", "shape": "dot", "size": 100}, {"color": "#97c2fc", "id": "Fanny", "label": "Fanny", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Grock", "label": "Grock", "shape": "dot", "size": 70}, {"color": "#97c2fc", "id": "Leomord", "label": "Leomord", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Guinevere", "label": "Guinevere", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Karrie", "label": "Karrie", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Kagura", "label": "Kagura", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Helcurt", "label": "Helcurt", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Freya", "label": "Freya", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Chou", "label": "Chou", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Sun", "label": "Sun", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Alpha", "label": "Alpha", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Yi Sun-shin", "label": "Yi Sun-shin", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Moskov", "label": "Moskov", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "[\u0027\u0027]", "label": "[\u0027\u0027]", "shape": "dot", "size": 90}, {"color": "#97c2fc", "id": "Johnson", "label": "Johnson", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Argus", "label": "Argus", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Estes", "label": "Estes", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Gatotkaca", "label": "Gatotkaca", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Lancelot", "label": "Lancelot", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pharsa", "label": "Pharsa", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Valir", "label": "Valir", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Harith", "label": "Harith", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Hylos", "label": "Hylos", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Popol and Kupa", "label": "Popol and Kupa", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "X.Borg", "label": "X.Borg", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Gusion", "label": "Gusion", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Hanabi", "label": "Hanabi", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Aldous", "label": "Aldous", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Claude", "label": "Claude", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Hanzo", "label": "Hanzo", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Thamuz", "label": "Thamuz", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Kadita", "label": "Kadita", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Ling", "label": "Ling", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Masha", "label": "Masha", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Uranus", "label": "Uranus", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "[\u0027Uranus\u2019s high resilience allows him to take more damage on the battlefield\u0027, \u0027 giving teammates more cover when fighting the enemy.\u0027]", "label": "[\u0027Uranus\u2019s high resilience allows him to take more damage on the battlefield\u0027, \u0027 giving teammates more cover when fighting the enemy.\u0027]", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Minsitthar", "label": "Minsitthar", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Baxia", "label": "Baxia", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Selena", "label": "Selena", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Kimmy", "label": "Kimmy", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Khufra", "label": "Khufra", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Lylia", "label": "Lylia", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Wanwan", "label": "Wanwan", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Badang", "label": "Badang", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Carmilla", "label": "Carmilla", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Atlas", "label": "Atlas", "shape": "dot", "size": 50}, {"color": "#97c2fc", "id": "Cecilion", "label": "Cecilion", "shape": "dot", "size": 20}, {"color": "#97c2fc", "id": "Benedetta", "label": "Benedetta", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Khaleed", "label": "Khaleed", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Mathilda", "label": "Mathilda", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Phoveus", "label": "Phoveus", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Yu Zhong", "label": "Yu Zhong", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Yve", "label": "Yve", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "[\u0027Atlas\u0027, \u0027Tigreal\u0027, \u0027Minotaur\u0027]", "label": "[\u0027Atlas\u0027, \u0027Tigreal\u0027, \u0027Minotaur\u0027]", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Natan", "label": "Natan", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Aulus", "label": "Aulus", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "[\u0027Yve\u0027, \u0027Angela\u0027]", "label": "[\u0027Yve\u0027, \u0027Angela\u0027]", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Aamon", "label": "Aamon", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Valentina", "label": "Valentina", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "[\u0027Floryn\u0027, \u0027Hylos\u0027, \u0027Johnson\u0027]", "label": "[\u0027Floryn\u0027, \u0027Hylos\u0027, \u0027Johnson\u0027]", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Edith", "label": "Edith", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "[\u0027Angela\u0027, \u0027Atlas\u0027]", "label": "[\u0027Angela\u0027, \u0027Atlas\u0027]", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Floryn", "label": "Floryn", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "[\u0027Natan\u0027, \u0027Aulus\u0027, \u0027Alucard\u0027]", "label": "[\u0027Natan\u0027, \u0027Aulus\u0027, \u0027Alucard\u0027]", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Yin", "label": "Yin", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Melissa", "label": "Melissa", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Xavier", "label": "Xavier", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Julian", "label": "Julian", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Joy", "label": "Joy", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Arlott", "label": "Arlott", "shape": "dot", "size": 10}]);
+                  edges = new vis.DataSet([{"from": "Miya", "to": "Lolita", "width": 1}, {"from": "Miya", "to": "Rafaela", "width": 1}, {"from": "Miya", "to": "Minotaur", "width": 1}, {"from": "Balmond", "to": "Nana", "width": 1}, {"from": "Saber", "to": "Harley", "width": 1}, {"from": "Saber", "to": "Akai", "width": 1}, {"from": "Saber", "to": "Natalia", "width": 1}, {"from": "Alice", "to": "Aurora", "width": 1}, {"from": "Nana", "to": "Aurora", "width": 1}, {"from": "Tigreal", "to": "Gord", "width": 1}, {"from": "Tigreal", "to": "Lapu-Lapu", "width": 1}, {"from": "Tigreal", "to": "Vexana", "width": 1}, {"from": "Tigreal", "to": "Irithel", "width": 1}, {"from": "Tigreal", "to": "Jawhead", "width": 1}, {"from": "Tigreal", "to": "Martis", "width": 1}, {"from": "Tigreal", "to": "Chang\u0027e", "width": 1}, {"from": "Tigreal", "to": "Vale", "width": 1}, {"from": "Tigreal", "to": "Faramis", "width": 1}, {"from": "Tigreal", "to": "Granger", "width": 1}, {"from": "Tigreal", "to": "Esmeralda", "width": 1}, {"from": "Tigreal", "to": "Terizla", "width": 1}, {"from": "Tigreal", "to": "Silvanna", "width": 1}, {"from": "Tigreal", "to": "Luo Yi", "width": 1}, {"from": "Tigreal", "to": "Barats", "width": 1}, {"from": "Tigreal", "to": "Paquito", "width": 1}, {"from": "Tigreal", "to": "Beatrix", "width": 1}, {"from": "Alucard", "to": "Aurora", "width": 1}, {"from": "Karina", "to": "Diggie", "width": 1}, {"from": "Karina", "to": "Hilda", "width": 1}, {"from": "Karina", "to": "Brody", "width": 1}, {"from": "Karina", "to": "Gloo", "width": 1}, {"from": "Karina", "to": "Fredrinn", "width": 1}, {"from": "Akai", "to": "Lesley", "width": 1}, {"from": "Franco", "to": "Odette", "width": 1}, {"from": "Franco", "to": "Layla", "width": 1}, {"from": "Franco", "to": "Cyclops", "width": 1}, {"from": "Franco", "to": "Kaja", "width": 1}, {"from": "Franco", "to": "Lunox", "width": 1}, {"from": "Bane", "to": "Zhask", "width": 1}, {"from": "Bruno", "to": "Ruby", "width": 1}, {"from": "Clint", "to": "Aurora", "width": 1}, {"from": "Rafaela", "to": "Roger", "width": 1}, {"from": "Rafaela", "to": "Belerick", "width": 1}, {"from": "Rafaela", "to": "Dyrroth", "width": 1}, {"from": "Eudora", "to": "Zilong", "width": 1}, {"from": "Zilong", "to": "Hayabusa", "width": 1}, {"from": "Zilong", "to": "Harley", "width": 1}, {"from": "Zilong", "to": "Angela", "width": 1}, {"from": "Fanny", "to": "Grock", "width": 1}, {"from": "Minotaur", "to": "Leomord", "width": 1}, {"from": "Minotaur", "to": "Guinevere", "width": 1}, {"from": "Lolita", "to": "Roger", "width": 1}, {"from": "Lolita", "to": "Karrie", "width": 1}, {"from": "Lolita", "to": "Zhask", "width": 1}, {"from": "Hayabusa", "to": "Kagura", "width": 1}, {"from": "Hayabusa", "to": "Helcurt", "width": 1}, {"from": "Freya", "to": "Aurora", "width": 1}, {"from": "Gord", "to": "Grock", "width": 1}, {"from": "Chou", "to": "Aurora", "width": 1}, {"from": "Sun", "to": "Aurora", "width": 1}, {"from": "Alpha", "to": "Irithel", "width": 1}, {"from": "Ruby", "to": "Lapu-Lapu", "width": 1}, {"from": "Ruby", "to": "Diggie", "width": 1}, {"from": "Yi Sun-shin", "to": "Grock", "width": 1}, {"from": "Moskov", "to": "[\u0027\u0027]", "width": 1}, {"from": "Johnson", "to": "Argus", "width": 1}, {"from": "Estes", "to": "Grock", "width": 1}, {"from": "Aurora", "to": "Gatotkaca", "width": 1}, {"from": "Aurora", "to": "Argus", "width": 1}, {"from": "Aurora", "to": "Lancelot", "width": 1}, {"from": "Aurora", "to": "Pharsa", "width": 1}, {"from": "Aurora", "to": "Valir", "width": 1}, {"from": "Gatotkaca", "to": "Harith", "width": 1}, {"from": "Grock", "to": "Odette", "width": 1}, {"from": "Grock", "to": "Hylos", "width": 1}, {"from": "Grock", "to": "Popol and Kupa", "width": 1}, {"from": "Jawhead", "to": "X.Borg", "width": 1}, {"from": "Angela", "to": "Gusion", "width": 1}, {"from": "Angela", "to": "Hanabi", "width": 1}, {"from": "Angela", "to": "Aldous", "width": 1}, {"from": "Angela", "to": "Claude", "width": 1}, {"from": "Angela", "to": "Hanzo", "width": 1}, {"from": "Angela", "to": "Thamuz", "width": 1}, {"from": "Angela", "to": "Kadita", "width": 1}, {"from": "Angela", "to": "Ling", "width": 1}, {"from": "Angela", "to": "Masha", "width": 1}, {"from": "Uranus", "to": "[\u0027Uranus\u2019s high resilience allows him to take more damage on the battlefield\u0027, \u0027 giving teammates more cover when fighting the enemy.\u0027]", "width": 1}, {"from": "Hanabi", "to": "Minsitthar", "width": 1}, {"from": "Chang\u0027e", "to": "Baxia", "width": 1}, {"from": "Kaja", "to": "Selena", "width": 1}, {"from": "Kaja", "to": "Kimmy", "width": 1}, {"from": "Vale", "to": "Khufra", "width": 1}, {"from": "Vale", "to": "Lylia", "width": 1}, {"from": "Belerick", "to": "Wanwan", "width": 1}, {"from": "Kadita", "to": "Badang", "width": 1}, {"from": "Terizla", "to": "Carmilla", "width": 1}, {"from": "Terizla", "to": "Atlas", "width": 1}, {"from": "Cecilion", "to": "Cecilion", "width": 1}, {"from": "Atlas", "to": "Benedetta", "width": 1}, {"from": "Atlas", "to": "Khaleed", "width": 1}, {"from": "Atlas", "to": "Mathilda", "width": 1}, {"from": "Atlas", "to": "Phoveus", "width": 1}, {"from": "Yu Zhong", "to": "Luo Yi", "width": 1}, {"from": "Yve", "to": "[\u0027Atlas\u0027, \u0027Tigreal\u0027, \u0027Minotaur\u0027]", "width": 1}, {"from": "Natan", "to": "[\u0027\u0027]", "width": 1}, {"from": "Aulus", "to": "[\u0027Yve\u0027, \u0027Angela\u0027]", "width": 1}, {"from": "Aamon", "to": "[\u0027\u0027]", "width": 1}, {"from": "Valentina", "to": "[\u0027Floryn\u0027, \u0027Hylos\u0027, \u0027Johnson\u0027]", "width": 1}, {"from": "Edith", "to": "[\u0027Angela\u0027, \u0027Atlas\u0027]", "width": 1}, {"from": "Floryn", "to": "[\u0027Natan\u0027, \u0027Aulus\u0027, \u0027Alucard\u0027]", "width": 1}, {"from": "Yin", "to": "[\u0027\u0027]", "width": 1}, {"from": "Melissa", "to": "[\u0027\u0027]", "width": 1}, {"from": "Xavier", "to": "[\u0027\u0027]", "width": 1}, {"from": "Julian", "to": "[\u0027\u0027]", "width": 1}, {"from": "Joy", "to": "[\u0027\u0027]", "width": 1}, {"from": "Arlott", "to": "[\u0027\u0027]", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+id,name,equip,besty_hero,counter_hero,countered_hero,type
+1,Miya,"['Corrosion Scythe', 'Swift Boots', 'Demon Hunter Sword', 'Golden Staff', ""Haas' Claws"", 'Malefic Roar']",Lolita,Hylos,Hayabusa,Marksman
+2,Balmond,"['Cursed Helmet', 'Warrior Boots', 'War Axe', 'Bloodlust Axe', ""Queen's Wings"", 'Brute Force Breastplate']",Nana,Gord,Chou,Fighter
+3,Saber,"['Blade of the Heptaseas', ""Ice Hunter's Magic Shoes"", 'Endless Battle', 'Blade of Despair', 'Hunter Strike', 'Immortality']",Harley,Odette,Diggie,Assassin
+4,Alice,"['Clock of Destiny', 'Demon Shoes', 'Ice Queen Wand', 'Dominance Ice', 'Oracle', 'Glowing Wand']",Aurora,Layla,Nana,Mage
+5,Nana,"['Enchanted Talisman', 'Magic Shoes', 'Genius Wand', 'Holy Crystal', 'Divine Glaive', 'Blood Wings']",Aurora,Fanny,Natalia,Mage
+6,Tigreal,"[""Athena's Shield"", 'Warrior Boots - Conceal', 'Antique Cuirass', 'Dominance Ice', 'Immortality', 'Cursed Helmet']",Gord,Miya,Eudora,Tank
+7,Alucard,"['Endless Battle', 'Warrior Boots', 'War Axe', ""Haas' Claws"", 'Blade of Despair', 'Immortality']",Aurora,Layla,Karina,Fighter
+8,Karina,"['Shadow Twinblades', ""Ice Hunter's Arcane Boots"", 'Calamity Reaper', 'Concentrated Energy', 'Holy Crystal', 'Blood Wings']",Diggie,Odette,Akai,Assassin
+9,Akai,"['Oracle', 'Warrior Boots - Conceal', 'Dominance Ice', 'Immortality', ""Athena's Shield"", 'Guardian Helmet']",Saber,Karina,Grock,Tank
+10,Franco,"['Thunder Belt', 'Rapid Boots- Conceal', 'Cursed Helmet', 'Oracle', 'Dominance Ice', 'Guardian Helmet']",Odette,Gord,Fanny,Tank
+11,Bane,"['Endless Battle', 'Magic Shoes', 'War Axe', 'Hunter Strike', 'Blade of Despair', 'Immortality']",Zhask,Natalia,Zilong,Fighter
+12,Bruno,"[""Berserker's Fury"", 'Swift Boots', 'Scarlet Phantom', ""Haas' Claws"", 'Blade of Despair', 'Immortality']",Ruby,Sun,Hayabusa,Marksman
+13,Clint,"['Endless Battle', 'Magic Shoes', ""Berserker's Fury"", 'Scarlet Phantom', 'Malefic Roar', 'Rose Gold Meteor']",Aurora,Balmond,Saber,Marksman
+14,Rafaela,"['Enchanted Talisman', 'Demon Shoes - Favor', 'Necklace of Durance', 'Oracle', 'Immortality', 'Guardian Helmet']",Miya,Natalia,Harley,Support
+15,Eudora,"['Lightning Truncheon', 'Arcane Boots', 'Genius Wand', 'Holy Crystal', 'Fleeting Time', 'Divine Glaive']",Zilong,Saber,Aurora,Mage
+16,Zilong,"['Corrosion Scythe', 'Swift Boots', 'Demon Hunter Sword', 'Golden Staff', 'Blade of Despair', 'Malefic Roar']",Eudora,Yi Sun-shin,Alucard,Fighter
+17,Fanny,"['Bloodlust Axe', ""Flame Hunter's Warrior Boots"", ""Queen's Wings"", 'Brute Force Breastplate', 'War Axe', 'Immortality']",Grock,Layla,Akai,Assassin
+18,Layla,"[""Haas' Claws"", 'Swift Boots', 'Windtalker', ""Berserker's Fury"", 'Scarlet Phantom', 'Rose Gold Meteor']",Franco,Chou,Eudora,Marksman
+19,Minotaur,"['Dominance Ice', 'Warrior Boots - Favor', 'Oracle', ""Athena's Shield"", 'Antique Cuirass', 'Immortality']",Miya,Odette,Gord,Tank
+20,Lolita,"['Thunder Belt', 'Warrior Boots - Encourage', 'Oracle', ""Athena's Shield"", 'Dominance Ice', 'Immortality']",Roger,Cyclops,Kagura,Support
+21,Hayabusa,"['Blade of the Heptaseas', ""Flame Hunter's Magic Shoes"", 'Endless Battle', 'Hunter Strike', 'Blade of Despair', 'Immortality']",Zilong,Harley,Aurora,Assassin
+22,Freya,"['War Axe', 'Warrior Boots', 'Endless Battle', 'Blade of Despair', ""Haas' Claws"", 'Immortality']",Aurora,Alucard,Natalia,Fighter
+23,Gord,"['Glowing Wand', 'Demon Shoes', 'Ice Queen Wand', 'Genius Wand', 'Holy Crystal', 'Blood Wings']",Grock,Miya,Saber,Mage
+24,Natalia,"['Blade of the Heptaseas', ""Ice Hunter's Rapid Boots"", 'Endless Battle', 'Hunter Strike', 'Blade of Despair', 'Windtalker']",Saber,Clint,Yi Sun-shin,Assassin
+25,Kagura,"['Clock of Destiny', 'Arcane Boots', 'Lightning Truncheon', 'Holy Crystal', 'Divine Glaive', 'Blood Wings']",Hayabusa,Layla,Harley,Mage
+26,Chou,"['Endless Battle', 'Warrior Boots', 'Blade of Despair', 'Brute Force Breastplate', 'Malefic Roar', 'Immortality']",Aurora,Gord,Nana,Fighter
+27,Sun,"['Corrosion Scythe', 'Warrior Boots', 'Demon Hunter Sword', 'War Axe', 'Brute Force Breastplate', 'Blade of Despair']",Aurora,Layla,Odette,Fighter
+28,Alpha,"['Bloodlust Axe', 'Warrior Boots', 'War Axe', 'Blade of Despair', ""Queen's Wings"", 'Immortality']",Irithel,Zilong,Layla,Fighter
+29,Ruby,"[""Haas' Claws"", 'Magic Shoes', 'Endless Battle', 'War Axe', 'Brute Force Breastplate', 'Oracle']",Lapu-Lapu,Tigreal,Chou,Fighter
+30,Yi Sun-shin,"['Endless Battle', ""Flame Hunter's Magic Shoes"", 'Blade of Despair', ""Berserker's Fury"", 'Malefic Roar', 'Immortality']",Grock,Estes,Natalia,Assassin
+31,Moskov,"['Windtalker', 'Swift Boots', ""Berserker's Fury"", ""Haas' Claws"", 'Scarlet Phantom', 'Malefic Roar']",[''],[''],[''],Marksman
+32,Johnson,"['Dominance Ice', 'Warrior Boots - Encourage', 'Immortality', 'Oracle', 'Blade Armor', ""Athena's Shield""]",Argus,Miya,Diggie,Tank
+33,Cyclops,"['Enchanted Talisman', 'Magic Shoes', 'Concentrated Energy', 'Genius Wand', 'Holy Crystal', 'Immortality']",Franco,Karina,Harley,Mage
+34,Estes,"['Enchanted Talisman', 'Magic Shoes - Favor', 'Fleeting Time', 'Oracle', 'Immortality', ""Athena's Shield""]",Grock,Karina,Hayabusa,Support
+35,Hilda,"['Thunder Belt', 'Warrior Boots', 'Twilight Armor', 'Brute Force Breastplate', 'Oracle', 'Immortality']",Karina,Layla,Karrie,Fighter
+36,Aurora,"['Enchanted Talisman', 'Magic Shoes', 'Lightning Truncheon', 'Holy Crystal', 'Blood Wings', 'Immortality']",Gatotkaca,Eudora,Lancelot,Mage
+37,Lapu-Lapu,"['Bloodlust Axe', 'Warrior Boots', 'War Axe', ""Queen's Wings"", 'Blade of Despair', 'Immortality']",Tigreal,Layla,Akai,Fighter
+38,Vexana,"['Enchanted Talisman', 'Arcane Boots', 'Genius Wand', 'Holy Crystal', 'Fleeting Time', 'Blood Wings']",Tigreal,Odette,Lancelot,Mage
+39,Roger,"['Windtalker', ""Ice Hunter's Swift Boots"", 'Endless Battle', 'War Axe', 'Brute Force Breastplate', 'Blade of Despair']",Rafaela,Hayabusa,Saber,Fighter
+40,Karrie,"['Endless Battle', 'Swift Boots', 'Windtalker', 'Corrosion Scythe', ""Haas' Claws"", 'Immortality']",Lolita,Cyclops,Chou,Marksman
+41,Gatotkaca,"['Cursed Helmet', 'Tough Boots - Dire Hit', 'Immortality', 'Oracle', 'Dominance Ice', 'Guardian Helmet']",Aurora,Roger,Karina,Tank
+42,Harley,"['Feather of Heaven', ""Ice Hunter's Arcane Boots"", 'Genius Wand', 'Holy Crystal', 'Calamity Reaper', 'Divine Glaive']",Zilong,Cyclops,Diggie,Assassin
+43,Irithel,"['Windtalker', 'Swift Boots', 'Scarlet Phantom', ""Berserker's Fury"", 'Malefic Roar', 'Immortality']",Tigreal,Gord,Aurora,Marksman
+44,Grock,"['Dominance Ice', 'Tough Boots - Encourage', ""Athena's Shield"", 'Immortality', 'Antique Cuirass', 'Radiant Armor']",Fanny,Odette,Akai,Tank
+45,Argus,"['Demon Hunter Sword', 'Swift Boots', 'Corrosion Scythe', ""Berserker's Fury"", 'Scarlet Phantom', 'Immortality']",Aurora,Odette,Akai,Fighter
+46,Odette,"['Clock of Destiny', 'Arcane Boots', 'Glowing Wand', 'Holy Crystal', 'Divine Glaive', 'Blood Wings']",Grock,Cyclops,Aurora,Mage
+47,Lancelot,"['Blade of the Heptaseas', ""Ice Hunter's Magic Shoes"", 'Endless Battle', 'Blade of Despair', 'Hunter Strike', ""Queen's Wings""]",Aurora,Layla,Natalia,Assassin
+48,Diggie,"['Enchanted Talisman', 'Magic Shoes - Encourage', 'Fleeting Time', 'Dominance Ice', 'Immortality', 'Antique Cuirass']",Ruby,Aurora,Natalia,Support
+49,Hylos,"['Cursed Helmet', 'Tough Boots - Encourage', 'Immortality', ""Athena's Shield"", 'Dominance Ice', 'Guardian Helmet']",Grock,Roger,Diggie,Tank
+50,Zhask,"['Feather of Heaven', 'Demon Shoes', 'Holy Crystal', 'Fleeting Time', 'Divine Glaive', 'Blood Wings']",Lolita,Alucard,Gord,Mage
+51,Helcurt,"['Blade of the Heptaseas', ""Flame Hunter's Swift Boots"", ""Berserker's Fury"", 'Windtalker', 'Blade of Despair', 'Immortality']",Hayabusa,Odette,Akai,Assassin
+52,Pharsa,"['Clock of Destiny', 'Arcane Boots', 'Lightning Truncheon', 'Holy Crystal', 'Divine Glaive', 'Blood Wings']",Aurora,Odette,Zhask,Mage
+53,Lesley,"[""Berserker's Fury"", 'Magic Shoes', 'Windtalker', 'Blade of the Heptaseas', 'Endless Battle', 'Blade of Despair']",Akai,Odette,Saber,Marksman
+54,Jawhead,"['War Axe', 'Tough Boots', 'Endless Battle', 'Hunter Strike', 'Blade of Despair', 'Immortality']",Tigreal,Gord,Diggie,Fighter
+55,Angela,"['Fleeting Time', 'Demon Shoes - Favor', 'Necklace of Durance', 'Oracle', 'Dominance Ice', 'Ice Queen Wand']",Zilong,Argus,Estes,Support
+56,Gusion,"['Calamity Reaper', ""Ice Hunter's Magic Shoes"", 'Holy Crystal', 'Concentrated Energy', 'Fleeting Time', 'Divine Glaive']",Angela,Pharsa,Lolita,Assassin
+57,Valir,"['Glowing Wand', 'Demon Shoes', 'Ice Queen Wand', 'Genius Wand', 'Blood Wings', 'Immortality']",Aurora,Pharsa,Karina,Mage
+58,Martis,"['Blade of Despair', 'Warrior Boots', 'War Axe', 'Demon Hunter Sword', 'Brute Force Breastplate', 'Immortality']",Tigreal,Odette,Diggie,Fighter
+59,Uranus,"['Enchanted Talisman', 'Warrior Boots', 'Oracle', 'Dominance Ice', 'Antique Cuirass', 'Brute Force Breastplate']","['Uranus’s high resilience allows him to take more damage on the battlefield', ' giving teammates more cover when fighting the enemy.']",['Uranus strength in suppressing enemy movement speeds which counters any enemy hero whose strength is their movement speed. '],['Uranus is afraid of being instantly killed by an enemy hero. Mages who can quickly deal damage Uranus is his biggest threat  '],Tank
+60,Hanabi,"['Corrosion Scythe', 'Swift Boots', 'Demon Hunter Sword', 'Golden Staff', 'Blade of Despair', 'Malefic Roar']",Angela,Zilong,Gusion,Marksman
+61,Chang'e,"['Enchanted Talisman', 'Arcane Boots', 'Ice Queen Wand', 'Genius Wand', 'Glowing Wand', 'Divine Glaive']",Tigreal,Jawhead,Saber,Mage
+62,Kaja,"['Antique Cuirass', 'Warrior Boots - Conceal', 'Dominance Ice', 'Oracle', 'Ice Queen Wand', 'Glowing Wand']",Franco,Gusion,Martis,Support
+63,Selena,"['Clock of Destiny', ""Flame Hunter's Demon Shoes"", 'Lightning Truncheon', 'Calamity Reaper', 'Divine Glaive', 'Immortality']",Kaja,Layla,Saber,Assassin
+64,Aldous,"['Endless Battle', 'Tough Boots', 'War Axe', 'Brute Force Breastplate', 'Immortality', 'Malefic Roar']",Angela,Lesley,Kaja,Fighter
+65,Claude,"['Demon Hunter Sword', 'Demon Shoes', 'Golden Staff', 'Corrosion Scythe', 'Immortality', 'Malefic Roar']",Angela,Akai,Gatotkaca,Marksman
+66,Vale,"['Clock of Destiny', 'Arcane Boots', 'Lightning Truncheon', 'Holy Crystal', 'Fleeting Time', 'Immortality']",Tigreal,Hanabi,Gusion,Mage
+67,Leomord,"['Bloodlust Axe', 'Warrior Boots', 'War Axe', 'Endless Battle', 'Blade of Despair', 'Immortality']",Minotaur,Lesley,Kaja,Fighter
+68,Lunox,"['Enchanted Talisman', 'Demon Shoes', 'Genius Wand', 'Concentrated Energy', 'Holy Crystal', 'Blood Wings']",Franco,Lancelot,Martis,Mage
+69,Hanzo,"['Blade of the Heptaseas', ""Ice Hunter's Swift Boots"", 'Hunter Strike', 'Endless Battle', 'Blade of Despair', 'Immortality']",Angela,Kimmy,Johnson,Assassin
+70,Belerick,"['Cursed Helmet', 'Demon Shoes', 'Twilight Armor', 'Thunder Belt', 'Blade Armor', 'Oracle']",Rafaela,Miya,Gusion,Tank
+71,Kimmy,"['Genius Wand', 'Arcane Boots', 'Ice Queen Wand', 'Concentrated Energy', 'Holy Crystal', 'Blood Wings']",Kaja,Valir,Lancelot,Marksman
+72,Thamuz,"['Corrosion Scythe', 'Warrior Boots', 'War Axe', 'Cursed Helmet', 'Oracle', 'Immortality']",Angela,Miya,Minotaur,Fighter
+73,Harith,"['Enchanted Talisman', 'Magic Shoes', 'Calamity Reaper', 'Feather of Heaven', 'Holy Crystal', 'Immortality']",Gatotkaca,Layla,Kaja,Mage
+74,Minsitthar,"['Demon Hunter Sword', 'Tough Boots', 'Corrosion Scythe', 'Thunder Belt', ""Athena's Shield"", 'Immortality']",Hanabi,Harith,Lunox,Fighter
+75,Kadita,"['Clock of Destiny', 'Demon Shoes', 'Lightning Truncheon', 'Holy Crystal', 'Fleeting Time', 'Blood Wings']",Angela,Hanabi,Helcurt,Mage
+76,Faramis,"['Enchanted Talisman', 'Magic Shoes - Conceal', 'Fleeting Time', 'Immortality', 'Antique Cuirass', ""Athena's Shield""]",Tigreal,Gord,Granger,Support
+77,Badang,"['Demon Hunter Sword', 'Warrior Boots', 'Golden Staff', 'Oracle', 'Malefic Roar', 'Immortality']",Kadita,Fanny,Akai,Fighter
+78,Khufra,"['Cursed Helmet', 'Warrior Boots - Conceal', 'Oracle', 'Immortality', 'Dominance Ice', 'Guardian Helmet']",Vale,Fanny,Saber,Tank
+79,Granger,"['Hunter Strike', 'Magic Shoes', 'Blade of Despair', 'Endless Battle', 'Malefic Roar', 'Immortality']",Tigreal,Roger,Gusion,Marksman
+80,Guinevere,"['Concentrated Energy', 'Arcane Boots', 'Calamity Reaper', 'Holy Crystal', 'Blood Wings', 'Immortality']",Minotaur,Balmond,Diggie,Fighter
+81,Esmeralda,"['Enchanted Talisman', 'Arcane Boots', 'Feather of Heaven', 'Calamity Reaper', 'Holy Crystal', 'Blood Wings']",Tigreal,Johnson,Guinevere,Mage
+82,Terizla,"['Bloodlust Axe', 'Warrior Boots', 'War Axe', ""Queen's Wings"", 'Blade of Despair', 'Immortality']",Tigreal,Gord,Granger,Fighter
+83,X.Borg,"['Bloodlust Axe', 'Warrior Boots', 'Immortality', 'War Axe', 'Blade of Despair', 'Oracle']",Jawhead,Hylos,Minsitthar,Fighter
+84,Ling,"[""Berserker's Fury"", ""Flame Hunter's Magic Shoes"", 'Windtalker', 'Endless Battle', 'Blade of Despair', 'Immortality']",Angela,Diggie,Gord,Assassin
+85,Dyrroth,"['Bloodlust Axe', 'Warrior Boots', 'Endless Battle', 'Blade of Despair', ""Queen's Wings"", 'Immortality']",Rafaela,Gord,Johnson,Fighter
+86,Lylia,"['Enchanted Talisman', 'Magic Shoes', 'Ice Queen Wand', 'Genius Wand', 'Glowing Wand', 'Divine Glaive']",Vale,Layla,Saber,Mage
+87,Baxia,"['Cursed Helmet', 'Tough Boots - Encourage', 'Immortality', ""Athena's Shield"", 'Dominance Ice', 'Guardian Helmet']",Chang'e,Claude,Aldous,Tank
+88,Masha,"['Corrosion Scythe', 'Swift Boots', 'Demon Hunter Sword', 'Twilight Armor', 'Brute Force Breastplate', ""Athena's Shield""]",Angela,Jawhead,Harith,Fighter
+89,Wanwan,"['Corrosion Scythe', 'Swift Boots', 'Demon Hunter Sword', 'Windtalker', 'Immortality', ""Haas' Claws""]",Belerick,Pharsa,Khufra,Marksman
+90,Silvanna,"['Feather of Heaven', 'Magic Shoes', 'Concentrated Energy', 'Oracle', 'Immortality', 'Blood Wings']",Tigreal,Moskov,Valir,Fighter
+91,Cecilion,"['Clock of Destiny', 'Demon Shoes', 'Lightning Truncheon', 'Genius Wand', 'Ice Queen Wand', 'Divine Glaive']",Cecilion,X.Borg,Gusion,Mage
+92,Carmilla,"['Cursed Helmet', 'Tough Boots - Encourage', 'Dominance Ice', 'Guardian Helmet', 'Immortality', ""Athena's Shield""]",Terizla,Aurora,Harith,Support
+93,Atlas,"['Dominance Ice', 'Warrior Boots - Conceal', 'Immortality', ""Athena's Shield"", 'Blade Armor', 'Cursed Helmet']",Terizla,Karrie,Harith,Tank
+94,Popol and Kupa,"['Demon Hunter Sword', 'Swift Boots', 'Endless Battle', 'Windtalker', 'Immortality', 'Blade of Despair']",Grock,Karrie,Helcurt,Marksman
+95,Yu Zhong,"['Bloodlust Axe', 'Magic Shoes', 'Blade of Despair', 'War Axe', 'Oracle', ""Queen's Wings""]",Luo Yi,Zilong,Balmond,Fighter
+96,Luo Yi,"['Enchanted Talisman', 'Arcane Boots', 'Glowing Wand', 'Holy Crystal', 'Divine Glaive', 'Blood Wings']",Tigreal,Valir,Cecilion,Mage
+97,Benedetta,"['Bloodlust Axe', ""Flame Hunter's Magic Shoes"", 'Hunter Strike', 'Brute Force Breastplate', 'Malefic Roar', ""Queen's Wings""]",Atlas,Hanabi,Harith,Assassin
+98,Khaleed,"['Blade of the Heptaseas', 'Warrior Boots', 'Bloodlust Axe', 'War Axe', 'Oracle', 'Immortality']",Atlas,Sun,Akai,Fighter
+99,Barats,"['War Axe', 'Warrior Boots', 'Guardian Helmet', 'Brute Force Breastplate', 'Thunder Belt', ""Athena's Shield""]",Tigreal,Wanwan,Selena,Tank
+100,Brody,"['Endless Battle', 'Swift Boots', 'Blade of Despair', 'Malefic Roar', 'Brute Force Breastplate', 'Immortality']",Karina,Freya,Gusion,Marksman
+101,Yve,"['Ice Queen Wand', 'Demon Shoes', 'Glowing Wand', 'Genius Wand', 'Holy Crystal', 'Blood Wings']","['Atlas', 'Tigreal', 'Minotaur']","['Odette', 'Gord', 'Layla']","['Kaja', 'Harith', 'Franco']",Mage
+102,Mathilda,"['Enchanted Talisman', 'Arcane Boots - Favor', 'Necklace of Durance', 'Glowing Wand', 'Immortality', 'Oracle']",Atlas,Luo Yi,Wanwan,Support
+103,Paquito,"['Bloodlust Axe', 'Warrior Boots', 'Blade of Despair', ""Queen's Wings"", 'Brute Force Breastplate', 'Immortality']",Tigreal,Karrie,Harith,Fighter
+104,Gloo,"['Cursed Helmet', 'Tough Boots - Dire Hit', 'Oracle', 'Immortality', 'Dominance Ice', 'Guardian Helmet']",Karina,Alice,Freya,Tank
+105,Beatrix,"[""Haas' Claws"", 'Swift Boots', 'Blade of Despair', 'Demon Hunter Sword', 'Immortality', 'Rose Gold Meteor']",Tigreal,Irithel,Gusion,Marksman
+106,Phoveus,"['Clock of Destiny', 'Tough Boots', 'Concentrated Energy', ""Athena's Shield"", 'Immortality', 'Blood Wings']",Atlas,Wanwan,Lesley,Fighter
+107,Natan,"['Feather of Heaven', 'Magic Shoes', 'Golden Staff', 'Holy Crystal', 'Concentrated Energy', 'Divine Glaive']",[''],[''],[''],Marksman
+108,Aulus,"['Endless Battle', 'Warrior Boots', ""Berserker's Fury"", 'Brute Force Breastplate', 'Dominance Ice', 'Blade of Despair']","['Yve', 'Angela']","['Yve', 'Hanabi', 'Gord']","['Wanwan', 'Franco']",Fighter
+109,Aamon,"['Feather of Heaven', ""Ice Hunter's Arcane Boots"", 'Concentrated Energy', 'Calamity Reaper', 'Holy Crystal', 'Blood Wings']",[''],[''],[''],Assassin
+110,Valentina,"['Enchanted Talisman', 'Magic Shoes', 'Clock of Destiny', 'Concentrated Energy', 'Holy Crystal', 'Blood Wings']","['Floryn', 'Hylos', 'Johnson']","['Valentina', 'Wanwan', 'Alice']","['Valentina', 'Popol and Kupa', 'Khufra']",Mage
+111,Edith,"['Thunder Belt', 'Warrior Boots', 'Brute Force Breastplate', 'Dominance Ice', 'Oracle', 'Immortality']","['Angela', 'Atlas']","['Balmond', 'Bane']","['Wanwan', 'Layla', 'Irithel']",Tank
+112,Floryn,"['Demon Shoes - Favor', 'Necklace of Durance', 'Fleeting Time', 'Oracle', 'Immortality']","['Natan', 'Aulus', 'Alucard']","['Baxia', 'Yi Sun-shin', 'Valir']","['Karina', 'Harley', 'Martis']",Support
+113,Yin,"['Bloodlust Axe', 'Warrior Boots', 'War Axe', 'Blade of Despair', 'Brute Force Breastplate', 'Immortality']",[''],[''],[''],Fighter
+114,Melissa,"['Scarlet Phantom', 'Swift Boots', 'Demon Hunter Sword', ""Berserker's Fury"", 'Immortality', 'Malefic Roar']",[''],[''],[''],Marksman
+115,Xavier,"['Enchanted Talisman', 'Arcane Boots', 'Glowing Wand', 'Fleeting Time', 'Holy Crystal', 'Divine Glaive']",[''],[''],[''],Mage
+116,Julian,"['Clock of Destiny', 'Magic Shoes', 'Genius Wand', 'Brute Force Breastplate', 'Calamity Reaper', 'Oracle']",[''],[''],[''],Fighter
+117,Fredrinn,"['Warrior Boots', 'Bloodlust Axe', 'Cursed Helmet', 'Thunder Belt', 'Oracle', 'Guardian Helmet']",Karina,Khaleed,Karrie,Fighter
+118,Joy,"['Genius Wand', 'Arcane Boots', 'Ice Queen Wand', 'Fleeting Time', 'Holy Crystal', 'Blood Wings']",[''],[''],[''],Assassin
+120,Arlott,"['Endless Battle', 'Warrior Boots', 'Blade of Despair', 'Malefic Roar', 'Brute Force Breastplate', 'Oracle']",[''],[''],[''],Fighter
